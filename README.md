@@ -22,7 +22,9 @@ The modelling scripts requires python 3 and several libraries to be installed on
 1. Ensure you have installed all pre-requisite software as described in the Getting Started section.
 2. Clone this repository on to your machine.
 3. Through command line, navigate to the scripts directory of this repository.
-4. The static_modelling.py and dynamic_modelling.py scripts train models on data from a file in the data directory. Subsequently, the scripts evaluate the models and outputs MAPE metrics per model to standard out. Accordingly, both modelling scripts require a dataset argument set with "-D" or "--dataset". The following 6 datasets are supported:
+4. The static_modelling.py and dynamic_modelling.py scripts train models on data from a file in the data directory. Subsequently, the scripts evaluate the models and outputs MAPE metrics per model to standard out. Accordingly, both modelling scripts require a dataset argument set with "-D" or "--dataset". 
+ 
+The following 6 datasets are supported:
 
 1. acme_1vm
 2. acme_2vm
