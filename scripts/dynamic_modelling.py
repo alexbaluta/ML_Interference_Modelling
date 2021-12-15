@@ -157,23 +157,23 @@ if __name__ == "__main__":
 	args = parser.parse_args()
 
 	if args.dataset == "acme_1vm":
-		Xy = pd.read_csv('./data/acme_interference_1vm.csv')
+		Xy = pd.read_csv('../data/acme_interference_1vm.csv')
 	elif args.dataset == "acme_2vm":
-		Xy = pd.read_csv('./data/acme_interference_2vm.csv')
+		Xy = pd.read_csv('../data/acme_interference_2vm.csv')
 	elif args.dataset == "stress_1vm":
-		Xy = pd.read_csv('./data/stress_ng_interference_1vm.csv')
+		Xy = pd.read_csv('../data/stress_ng_interference_1vm.csv')
 	elif args.dataset == "stress_2vm":
-		Xy = pd.read_csv('./data/stress_ng_interference_2vm.csv')
+		Xy = pd.read_csv('../data/stress_ng_interference_2vm.csv')
 	elif args.dataset == "iot_1vm":
-		Xy = pd.read_csv('./data/iot_interference_1vm.csv')
+		Xy = pd.read_csv('../data/iot_interference_1vm.csv')
 	elif args.dataset == "iot_2vm":
-		Xy = pd.read_csv('./data/iot_interference_2vm.csv')
+		Xy = pd.read_csv('../data/iot_interference_2vm.csv')
 
 	Xy = select_data_subset(Xy)
 
-	if args.workload == "ordered":
+	if args.workload == "all_ordered":
 		pass
-	elif args.workload == "group_shuffled":
+	elif args.workload == "target_app_ordered":
 		Xy = shuffle_within_group(Xy, ["httperf_num", "httperf_per"])
 	elif args.workload == "random":
 		Xy = Xy.sample(frac=1).reset_index(drop=True)
@@ -184,8 +184,8 @@ if __name__ == "__main__":
 
 	print('Training and Evaluating Dynamic Models')
 
-	automl_mape = window_predict(Xy, "AutoML")
-	gaussian_mape = window_predict(Xy, "Gaussian")
+	automl_mape = window_predict(Xy, "AutoML", 300)
+	gaussian_mape = window_predict(Xy, "Gaussian", 300)
 
 	print("AutoML: " + str(automl_mape))
 	print("Gaussian: " + str(gaussian_mape))

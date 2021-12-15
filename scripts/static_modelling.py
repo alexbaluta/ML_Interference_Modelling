@@ -100,21 +100,20 @@ if __name__ == "__main__":
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-D", "--dataset", help="Dataset name.")
-	parser.add_argument("-W", "--workload", help="Workload structure.")
 	args = parser.parse_args()
 
 	if args.dataset == "acme_1vm":
-		Xy = pd.read_csv('./data/acme_interference_1vm.csv')
+		Xy = pd.read_csv('../data/acme_interference_1vm.csv')
 	elif args.dataset == "acme_2vm":
-		Xy = pd.read_csv('./data/acme_interference_2vm.csv')
+		Xy = pd.read_csv('../data/acme_interference_2vm.csv')
 	elif args.dataset == "stress_1vm":
-		Xy = pd.read_csv('./data/stress_ng_interference_1vm.csv')
+		Xy = pd.read_csv('../data/stress_ng_interference_1vm.csv')
 	elif args.dataset == "stress_2vm":
-		Xy = pd.read_csv('./data/stress_ng_interference_2vm.csv')
+		Xy = pd.read_csv('../data/stress_ng_interference_2vm.csv')
 	elif args.dataset == "iot_1vm":
-		Xy = pd.read_csv('./data/iot_interference_1vm.csv')
+		Xy = pd.read_csv('../data/iot_interference_1vm.csv')
 	elif args.dataset == "iot_2vm":
-		Xy = pd.read_csv('./data/iot_interference_2vm.csv')
+		Xy = pd.read_csv('../data/iot_interference_2vm.csv')
 
 	Xy = select_data_subset(Xy)
 
