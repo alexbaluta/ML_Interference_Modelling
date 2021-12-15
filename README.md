@@ -46,4 +46,5 @@ The "target_app_ordered" workload structure represents a scenario in which the t
 The "random" workload structure randomizes all data. There is no order.
 
 The dynamic_modelling.py script should be run from command line in the following format: python classification.py --dataset <datasetName> --workload <workloadStructure>
-5. Once either of the scripts have run, the metrics are output to standard out in your terminal. Note that the dynamic_modelling.py script takes approximately 12 hours to run.
+
+ 5. Once either of the scripts have run, the metrics are output to standard out in your terminal. Note that the dynamic_modelling.py script takes approximately 12 hours to run.
