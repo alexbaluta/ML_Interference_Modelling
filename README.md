@@ -24,20 +24,20 @@ The modelling scripts requires python 3 and several libraries to be installed on
 3. Through command line, navigate to the scripts directory of this repository.
 4. The static_modelling.py and dynamic_modelling.py scripts train models on data from a file in the data directory. Subsequently, the scripts evaluate the models and outputs MAPE metrics per model to standard out. Accordingly, both modelling scripts require a dataset argument set with "-D" or "--dataset". The following 6 datasets are supported:
 
-a. acme_1vm
-b. acme_2vm
-c. stress_1vm
-d. stress_2vm
-e. iot_1vm
-f. iot_2vm
+1. acme_1vm
+2. acme_2vm
+3. stress_1vm
+4. stress_2vm
+5. iot_1vm
+6. iot_2vm
 
 The static_modelling.py script should be run from command line in the following format: python classification.py --dataset <datasetName>
 
 Note that the static_modelling.py script will randomize the order of the data and apply an 80-20 train test split. In contrast, the dynamic_modelling.py script takes in an additional parameter "-W" or "--workload". This parameter specifies how the performance data should be structured. There are three options:
 
-a. all_ordered
-b. target_app_ordered
-c. random
+1. all_ordered
+2. target_app_ordered
+3. random
 
 The "all_ordered" workload structure represents a scenario in which both the target application workload and the interfering application workload are ordered by workload intensity. 
 The "target_app_ordered" workload structure represents a scenario in which the target application workload is ordered by workload intensity and the interfering application workload is random. That is, there is structure to the target application workload and the intensity of the interfering application workload is unknown. In this scenario, an application owner knows the characteristics of workload traffic to their application and does not have visibility of the interfering application. In our paper, we present results obtained from using the "target_app_ordered" workload structure for modelling.
