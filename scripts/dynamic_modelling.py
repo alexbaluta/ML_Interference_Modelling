@@ -184,8 +184,8 @@ if __name__ == "__main__":
 
 	print('Training and Evaluating Dynamic Models')
 
-	automl_mape = window_predict(Xy, "AutoML", 300)
-	gaussian_mape = window_predict(Xy, "Gaussian", 300)
+	automl_mape = window_predict(Xy, "AutoML")
+	gaussian_mape = window_predict(Xy, "Gaussian")
 
 	print("AutoML: " + str(automl_mape))
 	print("Gaussian: " + str(gaussian_mape))
