@@ -1,4 +1,4 @@
-acme_db_cpu,acme_db_mem,acme_web_cpu,acme_web_mem,db_host_cpu,web_host_cpu,Time,class,db_host_mem,httperf_num,httperf_per,request_rate,stress_ng_cpu,total_time,web_host_mem
+acme_db_cpu,acme_db_mem,acme_web_cpu,acme_web_mem,db_host_cpu,web_host_cpu,Time,class,db_host_mem,httperf_num,httperf_per,request_rate,interference_wkld_intensity,total_time,web_host_mem
 1.1521,1.4536,4.1105,0.5007,1.9,8.0,1602036094.0,0.0,7.8432,3125,0.032,238.9,0.0,1.1,7.1585
 5.7164,1.4588,21.1059,0.8913,6.4,14.5,1602036107.0,0.0,7.8448,3125,0.032,238.9,0.0,1.1,7.5383
 5.5892,1.4739,14.0042,0.913,5.8,11.8,1602036120.0,0.0,7.8499,3125,0.032,238.9,0.0,1.1,7.5992
