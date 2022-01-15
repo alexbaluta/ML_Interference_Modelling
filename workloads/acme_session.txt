@@ -1,0 +1,8 @@
+/rest/api/login method=POST contents='{"login":"uid0@email.com", "password":"password"}'
+/rest/api/customer/byid/uid0@email.com method=GET
+/rest/api/customer/byid/uid0@email.com method=POST contents='{ "miles_ytd": 1000, "phoneNumberType": "BUSINESS", "phoneNumber": "919-123-4567", "_id": "uid3447@email.com", "address": { "postalCode": "27618", "streetAddress1": "124 Main St.", "stateProvince": "NC", "country": "USA", "city": "Anytown" }, "status": "GOLD", "password": "password", "total_miles": 1000000 }'
+/rest/api/flights/queryflights method=POST contents='{"fromAirport": "BOM", "toAirport": "JFK", "fromDate": "Tue May 21 00:00:00 EDT 2019", "returnDate": "Sat Jun 01 00:00:00 EDT 2019", "oneWay": "false"}'
+/rest/api/bookings/bookflights method=POST contents='{"userId": "uid0@email.com", "toFlightId": "LHR", "retFlightId": "CDG", "oneWay": "true"}'
+/rest/api/bookings/byuser/uid0@email.com method=GET	
+/rest/api/bookings/cancelbooking method=POST contents='{"number": "baf81437-4f0e-433f-b8d2-4741f2226340", "userId": "uid0@email.com"}'
+/rest/api/login/logout method=GET
